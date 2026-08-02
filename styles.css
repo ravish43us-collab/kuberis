@@ -3,6 +3,7 @@
 
 :root{
   --red:#d71920;
+  --red-number:rgba(215,25,32,.65);
   --red-dark:#7f1116;
   --red-deep:#3a0d10;
   --gold:#c79a57;
@@ -384,7 +385,7 @@ h3{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.06;font-w
   width:42px;
   height:42px;
   border-radius:50%;
-  background:linear-gradient(135deg,#f4d9d7,#d69d97);
+  background:#d69d97 url("assets/about-founder-generated.png") center 24%/cover no-repeat;
   flex:0 0 auto;
 }
 .hero-review-person strong{
@@ -443,7 +444,7 @@ h3{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.06;font-w
   border-radius:28px;
   background:rgba(255,255,255,.32);
 }
-.number{font-family:"Cormorant Garamond",serif;color:var(--red);font-size:48px;line-height:1}
+.number{font-family:"Cormorant Garamond",serif;color:var(--red-number);font-size:48px;line-height:1}
 .belief p{color:var(--muted);line-height:1.72}
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18)}
 .metric{padding:42px 22px;text-align:center;border-right:1px solid rgba(255,255,255,.18)}
@@ -506,7 +507,9 @@ h3{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.06;font-w
 }
 .person{display:flex;align-items:center;gap:14px}
 .person strong{font-size:14px;font-weight:700}
-.avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#eee,#aaa)}
+.avatar{width:46px;height:46px;border-radius:50%;background:#aaa center/cover no-repeat}
+.testimonials .quote-card:nth-child(1) .avatar{background-image:url("assets/about-team-1-generated.png")}
+.testimonials .quote-card:nth-child(2) .avatar{background-image:url("assets/about-team-2-generated.png")}
 .person small{display:block;font-size:13px;line-height:1.35;color:#c9a8a9}
 
 .services-grid{
@@ -708,7 +711,7 @@ h3{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.06;font-w
   font-family:"Cormorant Garamond",serif;
   font-size:clamp(48px,4.2vw,64px);
   line-height:.9;
-  color:rgba(215,25,32,.65);
+  color:var(--red-number);
 }
 .process-step .heading-card{
   margin:0;
@@ -1025,7 +1028,6 @@ h3{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.06;font-w
   padding:34px 34px 32px;
   border-radius:26px;
 }
-.about-value-number{color:var(--gold)}
 .about-value-card .heading-card{
   margin-top:18px;
 }
