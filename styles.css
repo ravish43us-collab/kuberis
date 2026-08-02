@@ -1290,7 +1290,7 @@ h3{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.06;font-w
   background:linear-gradient(135deg,#2c090b,#120405);
 }
 .footer-marquee .marquee-track{
-  animation-duration:38s;
+  animation-duration:30s;
   padding:22px 0;
 }
 .footer-marquee .marquee-track span{
