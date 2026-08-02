@@ -412,7 +412,8 @@ h3{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.06;font-w
   pointer-events:none;
 }
 .marquee{overflow:hidden;border-bottom:1px solid var(--line);white-space:nowrap}
-.marquee-track{display:inline-flex;align-items:center;min-width:max-content;animation:marquee 28s linear infinite;padding:28px 0}
+.marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite;padding:28px 0;will-change:transform}
+.marquee-group{display:flex;align-items:center;justify-content:space-around;flex-shrink:0;min-width:100vw}
 .marquee span{
   display:inline-flex;
   align-items:center;
@@ -1290,23 +1291,21 @@ h3{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.06;font-w
   background:linear-gradient(135deg,#2c090b,#120405);
 }
 .footer-marquee .marquee-track{
-  animation:footer-marquee-shift 30s linear infinite;
   padding:22px 0;
 }
+.footer-marquee .marquee-group{
+  justify-content:center;
+  gap:100px;
+}
 .footer-marquee .marquee-track span{
-  margin:0 32px;
-  font-size:15px;
+  margin:0;
+  font-size:22px;
   color:rgba(255,255,255,.38)
 }
 .footer-marquee .marquee-track b{
   color:#ef7f84;
-  margin-left:18px;
+  /*margin-left:12px;*/
 }
-@keyframes footer-marquee-shift{
-  from{transform:translateX(-25%)}
-  to{transform:translateX(-75%)}
-}
-
 .footer{
   position:relative;
   overflow:hidden;
