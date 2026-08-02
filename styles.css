@@ -1290,7 +1290,7 @@ h3{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.06;font-w
   background:linear-gradient(135deg,#2c090b,#120405);
 }
 .footer-marquee .marquee-track{
-  animation-duration:30s;
+  animation:footer-marquee-shift 30s linear infinite;
   padding:22px 0;
 }
 .footer-marquee .marquee-track span{
@@ -1301,6 +1301,10 @@ h3{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.06;font-w
 .footer-marquee .marquee-track b{
   color:#ef7f84;
   margin-left:18px;
+}
+@keyframes footer-marquee-shift{
+  from{transform:translateX(-25%)}
+  to{transform:translateX(-75%)}
 }
 
 .footer{
