@@ -29,18 +29,19 @@
         --tr-chat-font: Manrope, Arial, sans-serif;
       }
       .tr-chat-panel {
-        inset: auto 24px 24px auto;
-        width: min(420px, calc(100vw - 48px));
-        height: min(680px, calc(100vh - 48px));
-        height: min(680px, calc(100dvh - 48px));
+        inset: 0 0 0 auto;
+        width: min(440px, 100vw);
+        height: 100vh;
+        height: 100dvh;
         max-height: none;
-        border-radius: 28px;
-        border: 1px solid var(--tr-chat-border);
+        border-radius: 0;
+        border: 0;
+        border-left: 1px solid var(--tr-chat-border);
         box-shadow: var(--tr-chat-shadow);
-        transform: translateY(16px);
+        transform: translateX(100%);
       }
       .tr-chat-panel--open {
-        transform: translateY(0);
+        transform: translateX(0);
         animation: chat-drawer-enter 220ms ease-out;
       }
       .tr-chat-header, .tr-chat-composer, .tr-chat-notice {
@@ -48,13 +49,14 @@
       }
       .tr-chat-header {
         padding: 24px;
+        padding-top: max(24px, env(safe-area-inset-top));
         background: linear-gradient(125deg, #a3151d, #620e14);
         border-bottom: 1px solid rgba(255,255,255,.12);
       }
       .tr-chat-header__title {
-        font-family: 'Cormorant Garamond', Georgia, serif;
-        font-size: 28px;
-        font-weight: 500;
+        font-family: var(--tr-chat-font);
+        font-size: 22px;
+        font-weight: 700;
         letter-spacing: -.4px;
       }
       .tr-chat-header__close {
@@ -124,17 +126,18 @@
         outline-offset: 4px;
       }
       @keyframes chat-drawer-enter {
-        from { transform: translateY(16px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
       }
       @media (max-width: 480px) {
         .tr-chat-panel--open {
-          inset: auto 10px 10px;
-          width: calc(100vw - 20px);
-          height: calc(100dvh - 20px);
-          border-radius: 24px;
+          inset: 0;
+          width: 100vw;
+          height: 100dvh;
+          border-radius: 0;
+          border: 0;
         }
-        .tr-chat-header { padding: 20px; }
+        .tr-chat-header { padding: max(20px, env(safe-area-inset-top)) 20px 20px; }
       }
       @media (prefers-reduced-motion: reduce) {
         .tr-chat-panel { transition: none; }
